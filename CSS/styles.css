@@ -1,0 +1,411 @@
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(../Fonts/Montserrat-Regular.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url(../Fonts/Montserrat-Medium.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url(../Fonts/Montserrat-SemiBold.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url(../Fonts/Montserrat-Bold.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 800;
+    font-display: swap;
+    src: url(../Fonts/Montserrat-ExtraBold.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 900;
+    font-display: swap;
+    src: url(../Fonts/Montserrat-Black.woff) format('woff');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+header,nav {
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+}
+
+header {
+    text-align: center;
+    background-color: #2472CD;
+    color:white;
+    padding: 10px 0;
+    height: 78px;
+    z-index: 3;
+}
+
+header h1 {
+    font-size: clamp(15px,4vw,23px);
+    margin: 5px 0;
+    font-weight: bold;
+}
+
+header p{
+    font-size: clamp(12px,4vw,15px);
+    margin-top: 5px;
+}
+
+nav {
+    padding-top: 100px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: white;
+}
+
+ul {
+    list-style:none;
+}
+
+.Menu-Options li {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px;
+    color: #2472CD;
+    transition: background-color 0.3s;
+}
+
+.Menu-Options li:hover {
+    background-color: #f0f0f0;
+}
+
+.Menu-Options .Menu-Logo:hover,.Menu-Options .Search-Option:hover {
+    background-color: #ccc;
+}
+
+.Menu-Options li a {
+    color: #2472CD;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.SubMenu {
+    position: relative;
+    cursor: pointer;
+}
+
+.SubMenu ul {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    display: none;
+}
+
+.Menu-Options .SubMenu:hover ul, .Menu-Options .SubMenu:focus ul {
+    display: block;
+}
+
+button {
+    cursor: pointer;
+    border: 0;
+    background: none;
+}
+
+.Two {
+    display: flex;
+    gap: 20px;
+}
+
+.Two span {
+    position: relative;
+    top: -19px;
+    right: 4px;
+    color: black;
+}
+
+#Menu, .Menu-Options .Menu-Logo {
+    display: none;
+}
+
+.Menu-Options .Search-Option {
+    position: absolute;
+    background-color: #ccc;
+    width: 100%;
+    left: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    z-index: 2;
+    top: -100%;
+    gap: 40px;
+    transition: top 1s ease;
+}
+
+.Menu-Options .Search-Option .Search input {
+    padding: 5px 0px 5px 35px;
+    border: 2px solid #979797;
+    border-bottom: 2px solid #e3e3e3;
+}
+
+.Menu-Options .Search-Option .Search input:focus {
+    border-width:2px;
+    border-color: #007BFF;
+    outline: none;
+}
+
+.Menu-Options .Search-Option .Search img {
+    position: absolute;
+    border-right: 1px solid black;
+    padding: 2px;
+    border-radius: 0 10px 10px 0;
+    top: 12px;
+}
+
+.Menu-Options .Search-Option .Search button {
+    background-color: #004dff;
+    color: white;
+    font-weight: 800;
+    font-size: 16px;
+    height: 33px;
+    border-radius: 0 0 10px 0;
+    padding: 0 4px;
+    position: relative;
+    right: 5px;
+    top: 1px;
+}
+
+main {
+    padding-top: 265px;
+}
+
+main .Banner {
+    color:white;
+    position: relative;
+}
+
+main .Banner img{
+    width: 100%;
+    height: auto;
+}
+
+main .Banner h2 {
+    position: absolute;
+    top: 40%;
+    left: 20%;
+    font-size: 30px;
+}
+
+main .Banner a {
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    font-size: 18px;
+    border: 2px solid white;
+    border-radius: 5px;
+    color:White;
+    padding: 5px;
+    font-weight: bold;
+}
+
+main section {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+h2 {
+    font-size: 22px;
+}
+
+main section .titulo {
+    text-align: center;
+    margin: 20px 0;
+}
+
+main section p{
+    font-size: 1.1em;
+    color: #555;
+}
+
+hr {
+    width: 94%;
+    margin: 20px auto;
+    border: 0;
+    height: 1px;
+    background-color: #ccc;
+}
+
+main section .Categoria {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 20px;
+    align-items: center;
+}
+
+article {
+    position: relative;
+    border-radius: 10px;
+}
+
+article img {
+    border-radius: 10px;
+}
+
+h4 {
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    font-size: 20px;
+}
+
+.Categoria div {
+    width: 300px;
+}
+
+.Categoria article:hover, .Categoria article:focus {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+.Four {
+    border:1px solid #ccc; /* #eff0f5; #e6e7ee */
+    border-radius: 5px;
+    padding: 5px;
+    text-align: center;
+    max-width: 300px;
+    width: auto;
+    height: auto;
+}
+
+.Four h2 {
+    margin-top: 20px;
+}
+
+.Four p {
+    font-size: 15px;
+}
+
+footer {
+    background-color: rgb(51, 51, 51);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    color: white;
+    gap: 100px;
+    margin-top: 60px;
+}
+
+footer h2 {
+    margin-top: 10px;
+}
+
+footer a {
+    color:White;
+    border-bottom: 1px solid white;
+}
+
+footer p {
+    margin: 10px 0;
+}
+
+@media (max-width: 953px) {
+    footer {
+      flex-direction: column;
+      gap: 10px;
+      align-items: center;
+    }
+}
+
+@media (max-width:727px) {
+    .Categoria div {
+        width: auto;
+    }
+
+    .Categoria div h2 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width:610px) {
+    .Menu-Options {
+        position: absolute;
+        right: -100%;
+        top: 98px;
+        width: 300px;
+        background-color: #ccc;
+        z-index: 1;
+        transition: right 1s ease;
+    }
+
+    .Menu-Options li {
+        display: block;
+    }
+
+    #Lupa,#Close-1 {
+        display: none;
+    }
+
+    #Menu, .Menu-Options .Menu-Logo {
+        display: flex;
+        color:black;
+        align-items: center;
+    }
+
+    .Menu-Options .Menu-Logo h3 {
+        margin-right: 142px;
+    }
+
+    .SubMenu ul,.Menu-Options .Search-Option {
+        position: relative;
+        top: 0;
+    }
+
+    main .Banner h2 {
+        top: 32%;
+        left: 5%;
+    }
+
+    main .Banner a {
+        top: 70%;
+        left: 6%;
+    }
+}
